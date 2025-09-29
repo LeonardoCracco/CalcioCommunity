@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,22 +6,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Statistiche Giocatori</h1>
+  <div class="container">
+    <h1>Statistiche Giocatori</h1>
 
-  <!-- Bottoni -->
-  <div class="bottoni">
-    <button onclick="caricaCSV('seriea.csv')">Serie A</button>
-    <button onclick="caricaCSV('premier.csv')">Premier League</button>
-    <button onclick="caricaCSV('laliga.csv')">La Liga</button>
+    <!-- Bottoni -->
+    <div class="bottoni">
+      <button onclick="caricaCSV('seriea.csv')" class="btn">Serie A</button>
+      <button onclick="caricaCSV('premier.csv')" class="btn">Premier League</button>
+      <button onclick="caricaCSV('laliga.csv')" class="btn">La Liga</button>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader" style="display:none;"></div>
+
+    <!-- Tabella -->
+    <table>
+      <thead>
+        <tr id="intestazione"></tr>
+      </thead>
+      <tbody id="contenuto"></tbody>
+    </table>
   </div>
-
-  <!-- Tabella -->
-  <table>
-    <thead>
-      <tr id="intestazione"></tr>
-    </thead>
-    <tbody id="contenuto"></tbody>
-  </table>
 
   <script src="code.js"></script>
 </body>

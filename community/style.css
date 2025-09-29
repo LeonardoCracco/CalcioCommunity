@@ -1,57 +1,88 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0a3d62, #3c6382);
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 h1 {
-    margin-top: 20px;
-    font-size: 2.5rem;
-    color: #f6b93b;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
-p {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
+/* Bottoni */
+.bottoni {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+.btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: linear-gradient(135deg,#3498db,#2980b9);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Loader */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tabella */
 table {
-    margin: 0 auto 40px auto;
-    border-collapse: collapse;
-    width: 85%;
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    color: #333;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+thead {
+  background-color: #3498db;
+  color: white;
 }
 
 th, td {
-    padding: 14px 18px;
-    text-align: center;
-}
-
-th {
-    background: #27ae60; /* verde prato */
-    color: #fff;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-    background-color: #ffffff;
+  background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #d1f5d3;
-    cursor: pointer;
+  background-color: #e1f5fe;
 }
